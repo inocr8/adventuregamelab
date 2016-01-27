@@ -1,3 +1,5 @@
+var Food = require('./food');
+
 var Hero = function(name, health, favouriteFood){
   this.name = name;
   this.health = health;

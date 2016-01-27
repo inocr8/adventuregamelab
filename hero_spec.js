@@ -1,4 +1,5 @@
 var Hero = require('./hero');
+var Food = require('./food');
 var assert = require('assert');
 
 describe('Hero', function(){

@@ -16,7 +16,7 @@ describe('Hero', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese');
   assert.equal('Cheese', hero1.favouriteFood);
   });
-  it('should create a hero who can say his name', function(){
+  it('should create a hero who can say his/her name', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese');
   assert.equal('I am a hero, my name is ' + hero1.name, hero1.talk());
   });
@@ -36,7 +36,7 @@ describe('Hero', function(){
     hero1.eat(food1);
     assert.equal(109, hero1.health);
   });
-  it('should be the case that when hero eats food that is his favourite health should go up by replenishment value multiplied by 1.5', function(){
+  it('should be the case that when hero eats food that is his/her favourite health should go up by replenishment value multiplied by 1.5', function(){
     var hero1 = new Hero('Bob', 99, 'Cheese');
     var food1 = new Food('Cheese', 10);
     hero1.eat(food1);
@@ -49,6 +49,7 @@ describe('Hero', function(){
     hero1.poop();
     assert.equal(undefined,hero1.belly[0]);
   });
+  it("")
 });
 
 

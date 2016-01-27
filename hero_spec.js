@@ -30,6 +30,12 @@ describe('Hero', function(){
     hero1.eat(food1);
     assert.equal('Ham', hero1.belly[0].name);
   });
+  it('should be when hero eats it makes health go up by the same amount as food replenishment value', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var food1 = new Food('Ham', 10);
+    hero1.eat(food1);
+    assert.equal(109, hero1.health);
+  });
 });
 
 

@@ -20,4 +20,25 @@ describe('Hero', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese');
   assert.equal('I am a hero, my name is ' + hero1.name, hero1.talk());
   });
+  it('should make make the hero eat food', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var food1 = new Food('Ham', 10);
+    hero1.eat('Ham');
+    assert.equal('Ham', hero1.belly[0].name);
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

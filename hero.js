@@ -1,4 +1,5 @@
 var Food = require('./food');
+var Rat = require('./rat');
 
 var Hero = function(name, health, favouriteFood){
   this.name = name;

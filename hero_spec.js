@@ -59,6 +59,15 @@ describe('Hero', function(){
     assert.equal(undefined, hero1.belly[0]);
     assert.equal('Oh sweet Jesus, what the hell did I eat that for?', hero1.plop());
   });
+// we need to confirm a hero object can be created with food and rat, and check the hero health level drops when poisoned food is consumed.
+  it('should be the case that when hero eats poisoned food, his health should go down by the poisonLevel', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var rat1 = new Rat('Jinky', 'axe', 5);
+    var food1 = new Food('Ham', 10);
+    rat1.lickWithTongue(food1);
+    hero1.eat(food1);
+    assert.equal(94, hero1.health);
+  });
 });
 
 

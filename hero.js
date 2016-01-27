@@ -11,11 +11,16 @@ var Hero = function(name, health, favouriteFood){
   }
   this.eat = function(food){
     this.belly.push(food);
-    if(this.favouriteFood === food.name){
-    this.health += (food.replenishmentValue*1.5);
+    if(food.poisoned != true){
+      if(this.favouriteFood === food.name){
+      this.health += (food.replenishmentValue*1.5);
+      }
+      else{
+        this.health += food.replenishmentValue;
+      }
     }
-    else{
-      this.health += food.replenishmentValue;
+    if(food.poisoned === true){
+      this.health -= food.poisonLevel;
     }
   }
   this.plop = function(food){

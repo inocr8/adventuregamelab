@@ -8,10 +8,10 @@ describe('Food', function(){
   var food1 = new Food('Cheese', 10);
   assert.equal('Cheese', food1.name);
   });
-  // it('should create a food with a healthy nature', function(){
-  // var food1 = new Food('Cheese', 10);
-  // assert.equal(99, food1.health);
-  // });
+  it('should create a food with a replenishment value', function(){
+  var food1 = new Food('Cheese', 10);
+  assert.equal(10, food1.replenishmentValue);
+  });
   // it('should create a food with a favourite food', function(){
   // var food1 = new Food('Cheese', 10);
   // assert.equal('Cheese', food1.favouriteFood);

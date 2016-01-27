@@ -17,6 +17,6 @@ describe('Hero', function(){
   });
   it('should create a hero who can say his name', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese')
-  assert.equal('I am a hero, my name is ' + hero1.name, hero1.talk());
+  assert.deepEqual('I am a hero, my name is ' + hero1.name, hero1.talk());
   });
 });

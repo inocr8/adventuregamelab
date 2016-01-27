@@ -1,6 +1,7 @@
 var Food = function(name, replenishmentValue){
   this.name = name;
   this.replenishmentValue = replenishmentValue;
+  this.poisoned = false;
 }
 
 // var food1 = new Food('Bob', 99);

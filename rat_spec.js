@@ -8,4 +8,10 @@ describe('Rat', function(){
   var rat1 = new Rat('weeHairy');
   assert.equal('weeHairy', rat1.type);
   });
+  it('should be the case that rats can spoil food', function(){
+    var rat1 = new Rat('weeHairy');
+    var food1 = new Food('Cheese', 10);
+    rat1.peeOn(food1);
+    assert.equal(food1.poisoned, true);
+  })
 });

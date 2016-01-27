@@ -36,11 +36,19 @@ describe('Hero', function(){
     hero1.eat(food1);
     assert.equal(109, hero1.health);
   });
-  it('should be the case that when hero eats food that is his favourite health should go up by replenishment value multiplied by 1.5', function(){
+  it('should be the case that when hero eats his favourite food, health should go up by replenishment value x1.5', function(){
     var hero1 = new Hero('Bob', 99, 'Cheese');
     var food1 = new Food('Cheese', 10);
     hero1.eat(food1);
     assert.equal(114, hero1.health);
+  });
+  it('should be that the hero drop his kegs and lets loose his first belly item', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var food1 = new Food('Cheese', 10);
+    hero1.eat(food1);
+    hero1.plop(food1);
+    assert.equal(undefined, hero1.belly[0]);
+    assert.equal('Oh sweet Jesus, what the hell did I eat that for?', hero1.plop());
   });
 });
 

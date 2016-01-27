@@ -18,6 +18,10 @@ var Hero = function(name, health, favouriteFood){
       this.health += food.replenishmentValue;
     }
   }
+  this.plop = function(food){
+    this.belly.shift(food);
+    return("Oh sweet Jesus, what the hell did I eat that for?");
+  }
 }
 
 // var hero1 = new Hero('Bob', 99, 'Cheese')

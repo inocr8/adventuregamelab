@@ -11,7 +11,12 @@ var Hero = function(name, health, favouriteFood){
   }
   this.eat = function(food){
     this.belly.push(food);
-    this.health += food.replenishmentValue;
+    if(this.favouriteFood === food.name){
+    this.health += (food.replenishmentValue*1.5);
+    }
+    else{
+      this.health += food.replenishmentValue;
+    }
   }
 }
 

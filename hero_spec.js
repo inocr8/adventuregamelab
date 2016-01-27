@@ -11,4 +11,8 @@ describe('Hero', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese')
   assert.equal(99, hero1.health);
   });
+  it('should create a hero with a favourite food', function(){
+  var hero1 = new Hero('Bob', 99, 'Cheese')
+  assert.equal('Cheese', hero1.favouriteFood);
+  });
 });

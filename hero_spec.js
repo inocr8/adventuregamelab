@@ -20,6 +20,10 @@ describe('Hero', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese');
   assert.equal('I am a hero, my name is ' + hero1.name, hero1.talk());
   });
+  it('should be the case that the hero has a belly in which to put food into', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    assert.equal(undefined,hero1.belly[0]);
+  });
   it('should make make the hero eat food', function(){
     var hero1 = new Hero('Bob', 99, 'Cheese');
     var food1 = new Food('Ham', 10);

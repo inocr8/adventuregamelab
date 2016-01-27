@@ -19,4 +19,9 @@ describe('Rat', function(){
   var rat1 = new Rat('Jinky', 'axe', 5);
   assert.equal(5, rat1.poisonValue);
   });
+// we need to check that the rat has a touched food array created that starts empty
+  it('should be the case that the rat has a foodTouched array the starts empty', function(){
+  var rat1 = new Rat('Jinky', 'axe', 5);
+  assert.equal(undefined, rat1.foodTouched[0]);
+  });
 });

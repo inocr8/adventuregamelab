@@ -15,4 +15,8 @@ describe('Hero', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese')
   assert.equal('Cheese', hero1.favouriteFood);
   });
+  it('should create a hero who can say his name', function(){
+  var hero1 = new Hero('Bob', 99, 'Cheese')
+  assert.equal('I am a hero, my name is ' + hero1.name, hero1.talk());
+  });
 });

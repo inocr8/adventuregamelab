@@ -18,6 +18,9 @@ var Hero = function(name, health, favouriteFood){
       this.health += food.replenishmentValue;
     }
   }
+  this.poop = function(){
+    this.belly.shift();
+  }
 }
 
 // var hero1 = new Hero('Bob', 99, 'Cheese')

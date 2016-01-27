@@ -42,6 +42,13 @@ describe('Hero', function(){
     hero1.eat(food1);
     assert.equal(114, hero1.health);
   });
+  it("should be the case that a hero should be able to empty his/her belly", function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var food1 = new Food('Cheese', 10);
+    hero1.eat(food1);
+    hero1.poop();
+    assert.equal(undefined,hero1.belly[0]);
+  });
 });
 
 

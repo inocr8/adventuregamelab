@@ -12,6 +12,10 @@ var Rat = function(name, weapon, poisonValue){
     food.poisonLevel = this.poisonValue;
     return("Yummy yummy, I'm licking all over this " + food.name);
   }
+  this.attack = function(hero, attackLevel){
+    hero.health -= attackLevel;
+    return("Take some of this swedgin' with my mighty " + this.weapon);
+  }
 }
 
 // var rat1 = new Rat('Jinky', 'axe', 5);

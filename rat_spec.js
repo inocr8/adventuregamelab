@@ -37,4 +37,11 @@ describe('Rat', function(){
     assert.equal('Ham', rat1.foodLicked[0].name);
     assert.equal(5, food1.poisonLevel);
   });
+// we need to confirm a hero object can be created with rat, and check the hero health level drops when the rat attacks.
+  it('should be the case that when the rat attacks the hero, his health should go down by the attackLevel', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var rat1 = new Rat('Jinky', 'axe', 5);
+    rat1.attack(hero1, 10);
+    assert.equal(89, hero1.health);
+  });
 });

@@ -23,7 +23,7 @@ describe('Hero', function(){
   it('should make make the hero eat food', function(){
     var hero1 = new Hero('Bob', 99, 'Cheese');
     var food1 = new Food('Ham', 10);
-    hero1.eat('Ham');
+    hero1.eat(food1);
     assert.equal('Ham', hero1.belly[0].name);
   });
 });

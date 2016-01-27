@@ -11,6 +11,7 @@ var Hero = function(name, health, favouriteFood){
   }
   this.eat = function(food){
     this.belly.push(food);
+    this.health += food.replenishmentValue;
   }
 }
 

@@ -22,7 +22,7 @@ describe('Hero', function(){
 // we need to confirm a hero object can be created and check that the hero can talk.
   it('should create a hero who can say his name which is Bob', function(){
   var hero1 = new Hero('Bob', 99, 'Cheese');
-  assert.equal('I am a hero, my name is ' + hero1.name, hero1.talk());
+  assert.equal('I am a hero, my name is Bob', hero1.talk());
   });
 // we need to confirm a hero object can be created and check the hero has a belly.
   it('should be the case that the hero has a belly in which to put food into', function(){

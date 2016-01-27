@@ -7,3 +7,8 @@ var Hero = function(name, health, favouriteFood){
   }
 }
 
+// var hero1 = new Hero('Bob', 99, 'Cheese')
+
+// console.log(hero1);
+
+module.exports = Hero;

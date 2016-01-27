@@ -36,6 +36,12 @@ describe('Hero', function(){
     hero1.eat(food1);
     assert.equal(109, hero1.health);
   });
+  it('should be the case that when hero eats food that is his favourite health should go up by replenishment value multiplied by 1.5', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var food1 = new Food('Cheese', 10);
+    hero1.eat(food1);
+    assert.equal(114, hero1.health);
+  });
 });
 
 

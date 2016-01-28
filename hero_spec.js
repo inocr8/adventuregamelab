@@ -81,6 +81,12 @@ describe('Hero', function(){
     hero1.talkToMonster(monster1);
     assert.equal(true, monster1.hasHadANiceChat);
   });
+  it('should be possible for a hero to stomp on a rat', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var rat1 = new Rat('weeHairy');
+    hero1.stompOn(rat1);
+    assert.equal(true, rat1.squashedFlat);
+  });
 });
 
 

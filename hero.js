@@ -15,6 +15,9 @@ var Hero = function(name, health, favouriteFood){
   this.talkToMonster = function(monster){
     monster.hasHadANiceChat = true;
   },
+  this.stompOn = function(rat){
+    rat.squashedFlat = true;
+  },
   this.eat = function(food){
     this.belly.push(food);
     if(food.poisoned === true){

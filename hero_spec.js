@@ -2,6 +2,7 @@ var Hero = require('./hero');
 var Food = require('./food');
 var Rat = require('./rat');
 var Womans = require('./womans');
+var Monster = require('./monster');
 var assert = require('assert');
 
 describe('Hero', function(){
@@ -68,6 +69,11 @@ describe('Hero', function(){
     var womans1 = new Womans('Uthgerd');
     hero1.flowersToWomans(womans1);
     assert.equal(true, womans1.hasFlower);
+  });
+  it('should be possible for there to be  a monster with a name and type', function(){
+    var monster1 = new Monster('Jeff', 'gelatinous cube');
+    assert.equal('Jeff', monster1.name);
+    assert.equal('gelatinous cube', monster1.type);
   });
 });
 

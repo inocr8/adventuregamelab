@@ -1,5 +1,7 @@
 var Hero = require('./hero');
 var Food = require('./food');
+var Rat = require('./rat');
+var Womans = require('./womans');
 var assert = require('assert');
 
 describe('Hero', function(){
@@ -49,7 +51,24 @@ describe('Hero', function(){
     hero1.poop();
     assert.equal(undefined,hero1.belly[0]);
   });
-  it("")
+  it("should be the case that is a hero eats poisoned food their health should go down", function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var food1 = new Food('Ham', 10);
+    var rat1 = new Rat('weeHairy');
+    rat1.peeOn(food1);
+    hero1.eat(food1);
+    assert.equal(89, hero1.health);
+  });
+  it('should be possible to create a womans with a name', function(){
+    var womans1 = new Womans('Uthgerd');
+    assert.equal('Uthgerd', womans1.name);
+  });
+  it('should be possible for a hero to give flowers to womans', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var womans1 = new Womans('Uthgerd');
+    hero1.flowersToWomans(womans1);
+    assert.equal(true, womans1.hasFlower);
+  });
 });
 
 

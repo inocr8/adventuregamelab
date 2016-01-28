@@ -9,9 +9,15 @@ var Hero = function(name, health, favouriteFood){
     // console.log("I am a hero, my name is " + this.name);
     return("I am a hero, my name is " + this.name);
   }
+  this.flowersToWomans = function(womans){
+    womans.hasFlower = true;
+  },
   this.eat = function(food){
     this.belly.push(food);
-    if(this.favouriteFood === food.name){
+    if(food.poisoned === true){
+      this.health -= food.replenishmentValue;
+    }
+    else if(this.favouriteFood === food.name){
     this.health += (food.replenishmentValue*1.5);
     }
     else{

@@ -12,6 +12,9 @@ var Hero = function(name, health, favouriteFood){
   this.flowersToWomans = function(womans){
     womans.hasFlower = true;
   },
+  this.talkToMonster = function(monster){
+    monster.hasHadANiceChat = true;
+  },
   this.eat = function(food){
     this.belly.push(food);
     if(food.poisoned === true){

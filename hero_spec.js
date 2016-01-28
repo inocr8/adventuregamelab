@@ -75,6 +75,12 @@ describe('Hero', function(){
     assert.equal('Jeff', monster1.name);
     assert.equal('gelatinous cube', monster1.type);
   });
+  it('If only you could talk to the monsters', function(){
+    var hero1 = new Hero('Bob', 99, 'Cheese');
+    var monster1 = new Monster('Jeff', 'gelatinous cube');
+    hero1.talkToMonster(monster1);
+    assert.equal(true, monster1.hasHadANiceChat);
+  });
 });
 
 
